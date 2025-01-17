@@ -1565,7 +1565,7 @@ html,body{
     left: 0;
     width: 100%;
     height: 100%;
-    background: #fff; /* White background for loader */
+    background: #150b13; /* Jet black background for loader */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1573,7 +1573,7 @@ html,body{
 }
 
 #loader img {
-    width: 150px; /* Adjust logo size */
+    width: 450px; /* Adjust logo size */
     height: auto;
 }
 
