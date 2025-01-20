@@ -6,13 +6,29 @@
 		<!-- Google tag (gtag.js) -->
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-GKFD2HN67V"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <script>
+    window.dataLayer = window.dataLayer || [];
 
-  gtag('config', 'G-GKFD2HN67V');
-</script>
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-GKFD2HN67V');
+
+    // Helper function to delay opening a URL until a gtag event is sent.
+    function gtagSendEvent(url, label) {
+      var callback = function () {
+        if (typeof url === 'string') {
+          window.location = url;
+        }
+      };
+      gtag('event', 'conversion_event_purchase', { // Replace with your actual event name if needed
+        'event_callback': callback,
+        'event_timeout': 2000,
+        'event_label': label
+      });
+      return false;
+    }
+  </script>
 		<!--End of Google Tag-->
 		<!-- META DATA -->
 		<meta charset="utf-8">
