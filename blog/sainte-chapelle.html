@@ -40,9 +40,9 @@ function gtagSendEvent(url, label) {
 	<!--End of Google Tag-->
 <meta charset="utf-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-<title>Notre-dame-cathedral-history-and-fire</title>
-<meta name="description" content="Discover the captivating history of Notre-Dame Cathedral, a masterpiece of Gothic architecture in Paris. Explore its origins, cultural significance, and the events surrounding the devastating 2019 fire that shook the world."/>
-<meta name="keywords" content="Notre Dame Cathedral history, Notre Dame Cathedral fire, Notre Dame Paris history, Gothic architecture Paris, Notre Dame 2019 fire, history of Notre Dame Cathedral, Notre Dame fire aftermath, Notre Dame reconstruction updates, famous cathedrals in Paris, Notre Dame Cathedral facts, Paris cathedral fire, historical landmarks Paris, Notre Dame 2019 tragedy, rebuilding Notre Dame Paris, cultural significance of Notre Dame, Notre dame tours, notre dame private tours, the perfect vacation, notre dame outside walking tours"/>
+<title>Sainte-Chapelle | Description, History, & Facts (2025)</title>
+<meta name="description" content="Discover the captivating history of Sainte-Chapelle, a masterpiece of Gothic architecture in Paris. Explore its origins, and cultural significance"/>
+<meta name="keywords" content="Sainte-Chapelle history, Sainte-Chapelle Cathedral, Sainte-Chapelle Paris history, Gothic architecture Paris, Stained Glasses Saint Chapelle , History of Saint-Chapelle Cathedral, Sainte-Chapelle Gothic Architecture, Interesting Facts about Sainte-Chapelle, famous cathedrals in Paris, Joyau gothique, Crown of Thorns, historical landmarks Paris, Ile de la cite, Île de la Cité, Island in the seine, cultural significance of Sainte-Chapelle, Saint-Chapelle tours, Sainte-Chapelle private tours, Saint Chapelle, Sainte-Chapelle Skip the line,  the perfect vacation, notre dame outside walking tours"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <link rel="shortcut icon" href="#">
 <link rel="stylesheet" type="text/css" href="assets/css/screen.css"/>
@@ -65,15 +65,44 @@ function gtagSendEvent(url, label) {
 	<header class="main-header post-head " style="background-image: url(assets/img/blognotredamecathedralhistoryandfire.jpg)">
 	<div class="vertical">
 		<div class="main-header-content inner">
-			<h1 class="post-title">Notre Dame Cathedral Paris</h1>
+			<h1 class="post-title">Sainte-Chapelle - Everything you need to know</h1>
 			<div class="entry-title-divider">
 				<span></span><span></span><span></span>
 			</div>
 			
 			<section class="post-meta">
-				<time class="post-date" datetime="2025-01-26"> Last Edited - 26 January 2025</time> | 
+				<time class="post-date" id="lastEditedDate"> Last Edited - Loading...</time> | 
 				<a class="scrolltocomments" href="#giscus-comments" onclick="scrollToComments(event)">Comments</a>
 			</section>
+			
+			<script>
+				async function fetchLastEditedDate() {
+					const repo = "ThePerfectVacation/ThePerfectVacation.fr"; // Your GitHub repository
+					const filePath = "blog/sainte-chapelle.html"; // Path inside the repo
+					const apiUrl = `https://api.github.com/repos/${repo}/commits?path=${filePath}&per_page=1`;
+			
+					try {
+						const response = await fetch(apiUrl);
+						const commits = await response.json();
+			
+						if (commits.length > 0) {
+							let lastModifiedDate = new Date(commits[0].commit.committer.date);
+							let options = { year: 'numeric', month: 'long', day: 'numeric' };
+							let formattedDate = lastModifiedDate.toLocaleDateString('en-US', options);
+			
+							document.getElementById("lastEditedDate").textContent = `Last Edited - ${formattedDate}`;
+						} else {
+							document.getElementById("lastEditedDate").textContent = "Last Edited - Unknown";
+						}
+					} catch (error) {
+						console.error("Error fetching last edited date:", error);
+						document.getElementById("lastEditedDate").textContent = "Last Edited - Error Loading";
+					}
+				}
+			
+				fetchLastEditedDate();
+			</script>
+			
 			
 			<script>
 			function scrollToComments(event) {
