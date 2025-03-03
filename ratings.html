@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rate Your Experience</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: sans-serif;
+            text-align: center; /* Center all text */
+        }
+
+        h1 {
+            margin-bottom: 10px;
+        }
+
+        p {
+            margin-bottom: 20px;
+            padding: 0 20px; /* Add some padding for mobile */
+        }
+
+        #stars {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .star {
+            font-size: 50px;
+            cursor: pointer;
+            color: #ccc;
+            transition: color 0.3s ease, transform 0.2s ease;
+            margin: 5px;
+        }
+
+        .star:hover {
+            color: orange;
+            transform: scale(1.1);
+        }
+
+        .star.selected {
+            color: gold;
+        }
+
+        @media (max-width: 600px) {
+            .star {
+                font-size: 40px;
+            }
+            h1{
+                font-size: 24px;
+            }
+            p {
+                font-size: 14px; /* Adjust paragraph font size for mobile */
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Rate Your Experience</h1>
+    <p>Your guides worked hard to make your experience unforgettable! Please take a moment to rate their service.</p>
+    <div id="stars">
+        <span class="star" data-rating="1">★</span>
+        <span class="star" data-rating="2">★</span>
+        <span class="star" data-rating="3">★</span>
+        <span class="star" data-rating="4">★</span>
+        <span class="star" data-rating="5">★</span>
+    </div>
+
+    <script>
+        const stars = document.querySelectorAll('.star');
+        let selectedRating = 0;
+
+        stars.forEach(star => {
+            star.addEventListener('click', function() {
+                const rating = parseInt(this.dataset.rating);
+                selectedRating = rating;
+
+                stars.forEach(s => {
+                    const starRating = parseInt(s.dataset.rating);
+                    if (starRating <= rating) {
+                        s.classList.add('selected');
+                    } else {
+                        s.classList.remove('selected');
+                    }
+                });
+
+                if (rating >= 4) {
+                    window.location.href = "https://www.tripadvisor.com/UserReviewEdit-g187147-d29907975-Notre_Dame_Walking_Tour_with_Skip_The_Line_Sainte_Chapelle_Entry-Paris_Ile_de_France.html";
+                } else {
+                    window.location.href = "https://theperfectvacation.fr/blog/index.html";
+                }
+            });
+        });
+    </script>
+</body>
+</html>
