@@ -65,46 +65,39 @@
 		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 		<![endif]-->
 
-	<!--Privacy Policy-->
-	<script type="text/javascript" src="//embeds.iubenda.com/widgets/d28ffe68-cb4e-48d6-8149-cfeba93a4efd.js"></script>
-	<!--Privacy policy ends-->
-	<!--Google Tag Manager Starts-->
 	<!-- Google tag (gtag.js) -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-GKFD2HN67V"></script>
 	<script>
 		window.dataLayer = window.dataLayer || [];
-
 		function gtag() { dataLayer.push(arguments); }
 		gtag('js', new Date());
 
 		gtag('config', 'G-GKFD2HN67V');
-
-		// Helper function to delay opening a URL until a gtag event is sent.
-		function gtagSendEvent(url, label) {
-			var callback = function () {
-				if (typeof url === 'string') {
-					window.location = url;
-				}
-			};
-			gtag('event', 'conversion_event_purchase', { // Replace with your actual event name if needed
-				'event_callback': callback,
-				'event_timeout': 2000,
-				'event_label': label
-			});
-			return false;
-		}
 	</script>
 	<!--End of Google Tag-->
+
+
+	<!--Privacy Policy-->
+	<script type="text/javascript" src="//embeds.iubenda.com/widgets/d28ffe68-cb4e-48d6-8149-cfeba93a4efd.js"></script>
+	<!--Privacy policy ends-->
+
+
+
+
 	<!--Logo starts here
 	<div id="loader">
 		<img src="assets/logo/Final_Logo.gif" alt="Loading..." />
 	</div>
 
 Logo ends here-->
+
+
+
+
 </head>
 
 <body>
-	
+
 	<!--[if lte IE 9]>
 		<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade
 			your browser</a> to improve your experience and security.</p>
