@@ -24,18 +24,18 @@
             text-align: center;
             padding: 20px;
             box-sizing: border-box;
-            background-color: #f8f8f8; /* Light background */
+            background-color: #f8f8f8;
         }
 
         h1 {
             margin-bottom: 10px;
-            font-size: 30px; /* Bigger heading */
-            color: #333; /* Darker text */
+            font-size: 30px;
+            color: #333;
         }
 
         p {
             margin-bottom: 20px;
-            font-size: 18px; /* Bigger paragraph */
+            font-size: 18px;
             padding: 0 10px;
             color: #555;
         }
@@ -43,35 +43,35 @@
         #stars {
             display: flex;
             justify-content: center;
-            flex-wrap: wrap;
             margin-bottom: 20px;
+            white-space: nowrap; /* Prevent stars from wrapping */
         }
 
         .star {
-            font-size: 50px; /* Bigger stars */
+            font-size: 50px;
             cursor: pointer;
-            color: #ddd; /* Lighter star color */
+            color: #ddd;
             transition: color 0.3s ease, transform 0.2s ease;
-            margin: 10px; /* More space between stars */
+            margin: 10px;
         }
 
         .star:hover {
-            color: #ff9800; /* Orange hover color */
+            color: #ff9800;
             transform: scale(1.1);
         }
 
         .star.selected {
-            color: #ffc107; /* Gold selected color */
+            color: #ffc107;
         }
 
         #tip-message {
-            background-color: #ff5722; /* Red background */
-            padding: 15px 20px; /* More padding */
+            background-color: #ff5722;
+            padding: 15px 20px;
             margin-bottom: 20px;
             animation: flash 0.5s infinite alternate;
-            font-size: 20px; /* Bigger tip message */
+            font-size: 20px;
             color: white;
-            border-radius: 8px; /* Rounded corners */
+            border-radius: 8px;
         }
 
         @keyframes flash {
@@ -89,7 +89,7 @@
             flex-direction: row;
             align-items: center;
             justify-content: center;
-            margin-top: 30px; /* More space */
+            margin-top: 30px;
             width: 100%;
         }
 
@@ -97,29 +97,29 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 15px; /* More space */
-            padding: 15px; /* More padding */
-            background-color: #e0e0e0; /* Light grey background */
-            border-radius: 12px; /* More rounded corners */
-            transition: transform 0.2s ease, box-shadow 0.2s ease; /* Added box-shadow transition */
+            margin: 15px;
+            padding: 15px;
+            background-color: #e0e0e0;
+            border-radius: 12px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
             width: auto;
             box-sizing: border-box;
-            max-width: 120px; /* Slightly bigger */
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added box shadow */
+            max-width: 120px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
         #review-options a:hover {
             transform: scale(1.05);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Increased box shadow on hover */
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
         }
 
         #review-options img {
-            height: 60px; /* Bigger logo size */
+            height: 60px;
         }
 
         #book-text {
-            font-size: 16px; /* Bigger book text */
-            margin-top: 25px; /* More space */
+            font-size: 16px;
+            margin-top: 25px;
             margin-bottom: 15px;
             display: none;
             color: #444;
