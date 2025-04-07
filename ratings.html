@@ -24,17 +24,20 @@
             text-align: center;
             padding: 20px;
             box-sizing: border-box;
+            background-color: #f8f8f8; /* Light background */
         }
 
         h1 {
             margin-bottom: 10px;
-            font-size: 24px;
+            font-size: 30px; /* Bigger heading */
+            color: #333; /* Darker text */
         }
 
         p {
             margin-bottom: 20px;
-            font-size: 16px;
+            font-size: 18px; /* Bigger paragraph */
             padding: 0 10px;
+            color: #555;
         }
 
         #stars {
@@ -45,29 +48,30 @@
         }
 
         .star {
-            font-size: 40px;
+            font-size: 50px; /* Bigger stars */
             cursor: pointer;
-            color: #ccc;
+            color: #ddd; /* Lighter star color */
             transition: color 0.3s ease, transform 0.2s ease;
-            margin: 5px;
+            margin: 10px; /* More space between stars */
         }
 
         .star:hover {
-            color: orange;
+            color: #ff9800; /* Orange hover color */
             transform: scale(1.1);
         }
 
         .star.selected {
-            color: gold;
+            color: #ffc107; /* Gold selected color */
         }
 
         #tip-message {
-            background-color: red;
-            padding: 10px;
+            background-color: #ff5722; /* Red background */
+            padding: 15px 20px; /* More padding */
             margin-bottom: 20px;
             animation: flash 0.5s infinite alternate;
-            font-size: 19px;
+            font-size: 20px; /* Bigger tip message */
             color: white;
+            border-radius: 8px; /* Rounded corners */
         }
 
         @keyframes flash {
@@ -85,7 +89,7 @@
             flex-direction: row;
             align-items: center;
             justify-content: center;
-            margin-top: 20px;
+            margin-top: 30px; /* More space */
             width: 100%;
         }
 
@@ -93,31 +97,32 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 10px;
-            padding: 10px; /* Reduced padding */
-            background-color: transparent; /* Changed to transparent */
-            border: none; /* Remove border */
-            box-shadow: none; /* Remove box shadow */
-            text-decoration: none;
-            border-radius: 10px; /* Adjusted radius */
-            transition: transform 0.2s ease;
+            margin: 15px; /* More space */
+            padding: 15px; /* More padding */
+            background-color: #e0e0e0; /* Light grey background */
+            border-radius: 12px; /* More rounded corners */
+            transition: transform 0.2s ease, box-shadow 0.2s ease; /* Added box-shadow transition */
             width: auto;
             box-sizing: border-box;
-            max-width: 100px; /* Reduced max-width */
+            max-width: 120px; /* Slightly bigger */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added box shadow */
         }
 
         #review-options a:hover {
             transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Increased box shadow on hover */
         }
 
         #review-options img {
-            height: 50px; /* Increased logo size */
+            height: 60px; /* Bigger logo size */
         }
 
         #book-text {
-            font-size: 14px;
-            margin-top: 20px;
-            margin-bottom: 10px;
+            font-size: 16px; /* Bigger book text */
+            margin-top: 25px; /* More space */
+            margin-bottom: 15px;
+            display: none;
+            color: #444;
         }
     </style>
 </head>
@@ -137,19 +142,20 @@
     <div id="review-options">
         <a href="https://www.tripadvisor.com/UserReviewEdit-g187147-d29907975-Notre_Dame_Walking_Tour_with_Skip_The_Line_Sainte_Chapelle_Entry-Paris_Ile_de_France.html"
             target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Tripadvisor_logotype_circle.svg/1024px-Tripadvisor_logotype_circle.svg.png" alt="TripAdvisor Logo">
+            <img src="assets/logo/1.svg" alt="TripAdvisor Logo">
         </a>
         <a href="https://gyg.me/app_QR" target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/GetYourGuide_Logo.svg/1024px-GetYourGuide_Logo.svg.png" alt="GetYourGuide Logo">
+            <img src="assets/logo/2.svg" alt="GetYourGuide Logo">
         </a>
         <a href="https://g.page/r/CZKwCs5rtNlKEBM/review" target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/2048px-Google_%22G%22_Logo.svg.png" alt="Google Logo">
+            <img src="assets/logo/3.svg" alt="Google Logo">
         </a>
     </div>
 
     <script>
         const stars = document.querySelectorAll('.star');
         const reviewOptions = document.getElementById('review-options');
+        const bookText = document.getElementById('book-text');
         let selectedRating = 0;
 
         stars.forEach(star => {
@@ -168,8 +174,10 @@
 
                 if (rating >= 4) {
                     reviewOptions.style.display = 'flex';
+                    bookText.style.display = 'block';
                 } else {
                     reviewOptions.style.display = 'none';
+                    bookText.style.display = 'none';
                     window.location.href = "https://theperfectvacation.fr/blog/index.html";
                 }
             });
