@@ -44,7 +44,7 @@
             display: flex;
             justify-content: center;
             margin-bottom: 20px;
-            white-space: nowrap; /* Prevent stars from wrapping */
+            white-space: nowrap;
         }
 
         .star {
@@ -82,6 +82,51 @@
             to {
                 opacity: 0.5;
             }
+        }
+
+        #tour-type-options {
+            display: none;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            margin-top: 30px;
+            width: 100%;
+        }
+
+        #tour-type-options button {
+            margin: 15px;
+            padding: 15px 20px;
+            font-size: 18px;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        #tour-type-options button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        #tour-type-options button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to right, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 100%);
+            transform: translateX(-100%);
+            transition: transform 0.4s ease;
+        }
+
+        #tour-type-options button:hover::before {
+            transform: translateX(0);
         }
 
         #review-options {
@@ -138,9 +183,13 @@
         <span class="star" data-rating="4">★</span>
         <span class="star" data-rating="5">★</span>
     </div>
+    <div id="tour-type-options">
+        <button id="group-tour-button">Group Tour</button>
+        <button id="private-tour-button">Private Tour</button>
+    </div>
     <p id="book-text">How did you book your tour?</p>
     <div id="review-options">
-        <a href="https://www.tripadvisor.com/UserReviewEdit-g187147-d29907975-Notre_Dame_Walking_Tour_with_Skip_The_Line_Sainte_Chapelle_Entry-Paris_Ile_de_France.html"
+        <a id="tripadvisor-group" href="https://www.tripadvisor.com/UserReviewEdit-g187147-d29907975-Notre_Dame_Walking_Tour_with_Skip_The_Line_Sainte_Chapelle_Entry-Paris_Ile_de_France.html"
             target="_blank">
             <img src="assets/logo/1.svg" alt="TripAdvisor Logo">
         </a>
@@ -156,6 +205,10 @@
         const stars = document.querySelectorAll('.star');
         const reviewOptions = document.getElementById('review-options');
         const bookText = document.getElementById('book-text');
+        const tourTypeOptions = document.getElementById('tour-type-options');
+        const groupTourButton = document.getElementById('group-tour-button');
+        const privateTourButton = document.getElementById('private-tour-button');
+        const tripadvisorGroup = document.getElementById('tripadvisor-group');
         let selectedRating = 0;
 
         stars.forEach(star => {
@@ -173,14 +226,30 @@
                 });
 
                 if (rating >= 4) {
-                    reviewOptions.style.display = 'flex';
-                    bookText.style.display = 'block';
+                    tourTypeOptions.style.display = 'flex';
+                    reviewOptions.style.display = 'none';
+                    bookText.style.display = 'none';
                 } else {
+                    tourTypeOptions.style.display = 'none';
                     reviewOptions.style.display = 'none';
                     bookText.style.display = 'none';
                     window.location.href = "https://theperfectvacation.fr/blog/index.html";
                 }
             });
+        });
+
+        groupTourButton.addEventListener('click', function() {
+            tourTypeOptions.style.display = 'none';
+            reviewOptions.style.display = 'flex';
+            bookText.style.display = 'block';
+            tripadvisorGroup.href = "https://www.tripadvisor.com/UserReviewEdit-g187147-d29907975-Notre_Dame_Walking_Tour_with_Skip_The_Line_Sainte_Chapelle_Entry-Paris_Ile_de_France.html";
+        });
+
+        privateTourButton.addEventListener('click', function() {
+            tourTypeOptions.style.display = 'none';
+            reviewOptions.style.display = 'flex';
+            bookText.style.display = 'block';
+            tripadvisorGroup.href = "https://www.tripadvisor.com/UserReviewEdit-g187147-d28634449-Private_Notre_Dame_Outdoor_Tour_with_Crypt_Entry_Sainte_Chapelle-Paris_Ile_de_France.html";
         });
     </script>
 </body>
