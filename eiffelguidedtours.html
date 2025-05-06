@@ -14,7 +14,7 @@
 		content="Tour Eiffel Tower Tickets, Top of Eiffel tower Tickets, Eiffel tower tickets tower, Eiffel Tower, Tour guide Eiffel tower, Guided tour Eiffel, Eiffel Tower guided tour,">
 	<meta name="keywords"
 		content="Eiffel Tower guided tours, Eiffel Tower tour guide, Eiffel Tower tours, Eiffel Tower tickets, Eiffel Tower private tours, Paris tours, skip the line Eiffel Tower, Eiffel Tower tour prices">
-
+		<link rel="canonical" href="https://theperfectvacation.fr/eiffelguidedtours.html" />
 
 	<!--font-family-->
 	<link href="https://fonts.googleapis.com/css?family=Rufina:400,700" rel="stylesheet" />
@@ -80,96 +80,97 @@
 
 
 	<!--Privacy Policy-->
-</script>
-<link rel="stylesheet" id="silktide-consent-manager-css" href="/cookie-banner/silktide-consent-manager.css">
-<script src="/cookie-banner/silktide-consent-manager.js"></script>
-<script>
-silktideCookieBannerManager.updateCookieBannerConfig({
-  background: {
-	showBackground: true
-  },
-  cookieIcon: {
-	position: "bottomLeft"
-  },
-  cookieTypes: [
-	{
-	  id: "necessary",
-	  name: "Necessary",
-	  description: "<p>These cookies are necessary for the website to function properly and cannot be switched off. They help with things like logging in and setting your privacy preferences.</p>",
-	  required: true,
-	  onAccept: function() {
-		console.log('Add logic for the required Necessary here');
-	  }
-	},
-	{
-	  id: "analytical",
-	  name: "Analytical",
-	  description: "<p>These cookies help us improve the site by tracking which pages are most popular and how visitors move around the site.</p>",
-	  required: false,
-	  onAccept: function() {
-		gtag('consent', 'update', {
-		  analytics_storage: 'granted',
+	</script>
+	<link rel="stylesheet" id="silktide-consent-manager-css" href="/cookie-banner/silktide-consent-manager.css">
+	<script src="/cookie-banner/silktide-consent-manager.js"></script>
+	<script>
+		silktideCookieBannerManager.updateCookieBannerConfig({
+			background: {
+				showBackground: true
+			},
+			cookieIcon: {
+				position: "bottomLeft"
+			},
+			cookieTypes: [
+				{
+					id: "necessary",
+					name: "Necessary",
+					description: "<p>These cookies are necessary for the website to function properly and cannot be switched off. They help with things like logging in and setting your privacy preferences.</p>",
+					required: true,
+					onAccept: function () {
+						console.log('Add logic for the required Necessary here');
+					}
+				},
+				{
+					id: "analytical",
+					name: "Analytical",
+					description: "<p>These cookies help us improve the site by tracking which pages are most popular and how visitors move around the site.</p>",
+					required: false,
+					onAccept: function () {
+						gtag('consent', 'update', {
+							analytics_storage: 'granted',
+						});
+						dataLayer.push({
+							'event': 'consent_accepted_analytical',
+						});
+					},
+					onReject: function () {
+						gtag('consent', 'update', {
+							analytics_storage: 'denied',
+						});
+					}
+				},
+				{
+					id: "advertising",
+					name: "Advertising",
+					description: "<p>These cookies provide extra features and personalization to improve your experience. They may be set by us or by partners whose services we use.</p>",
+					required: false,
+					onAccept: function () {
+						gtag('consent', 'update', {
+							ad_storage: 'granted',
+							ad_user_data: 'granted',
+							ad_personalization: 'granted',
+						});
+						dataLayer.push({
+							'event': 'consent_accepted_advertising',
+						});
+					},
+					onReject: function () {
+						gtag('consent', 'update', {
+							ad_storage: 'denied',
+							ad_user_data: 'denied',
+							ad_personalization: 'denied',
+						});
+					}
+				}
+			],
+			text: {
+				banner: {
+					description: "<p>We use cookies on our site to enhance your user experience, provide personalized content, and analyze our traffic. <a href=\"https://your-website.com/cookie-policy\" target=\"_blank\">Cookie Policy.</a></p>",
+					acceptAllButtonText: "Accept all",
+					acceptAllButtonAccessibleLabel: "Accept all cookies",
+					rejectNonEssentialButtonText: "Reject non-essential",
+					rejectNonEssentialButtonAccessibleLabel: "Reject non-essential",
+					preferencesButtonText: "Preferences",
+					preferencesButtonAccessibleLabel: "Toggle preferences"
+				},
+				preferences: {
+					title: "Customize your cookie preferences",
+					description: "<p>We respect your right to privacy. You can choose not to allow some types of cookies. Your cookie preferences will apply across our website.</p>",
+					creditLinkText: "Get this banner for free",
+					creditLinkAccessibleLabel: "Get this banner for free"
+				}
+			},
+			position: {
+				banner: "bottomLeft"
+			}
 		});
-		dataLayer.push({
-		  'event': 'consent_accepted_analytical',
-		});
-	  },
-	  onReject: function() {
-		gtag('consent', 'update', {
-		  analytics_storage: 'denied',
-		});
-	  }
-	},
-	{
-	  id: "advertising",
-	  name: "Advertising",
-	  description: "<p>These cookies provide extra features and personalization to improve your experience. They may be set by us or by partners whose services we use.</p>",
-	  required: false,
-	  onAccept: function() {
-		gtag('consent', 'update', {
-		  ad_storage: 'granted',
-		  ad_user_data: 'granted',
-		  ad_personalization: 'granted',
-		});
-		dataLayer.push({
-		  'event': 'consent_accepted_advertising',
-		});
-	  },
-	  onReject: function() {
-		gtag('consent', 'update', {
-		  ad_storage: 'denied',
-		  ad_user_data: 'denied',
-		  ad_personalization: 'denied',
-		});
-	  }
-	}
-  ],
-  text: {
-	banner: {
-	  description: "<p>We use cookies on our site to enhance your user experience, provide personalized content, and analyze our traffic. <a href=\"https://your-website.com/cookie-policy\" target=\"_blank\">Cookie Policy.</a></p>",
-	  acceptAllButtonText: "Accept all",
-	  acceptAllButtonAccessibleLabel: "Accept all cookies",
-	  rejectNonEssentialButtonText: "Reject non-essential",
-	  rejectNonEssentialButtonAccessibleLabel: "Reject non-essential",
-	  preferencesButtonText: "Preferences",
-	  preferencesButtonAccessibleLabel: "Toggle preferences"
-	},
-	preferences: {
-	  title: "Customize your cookie preferences",
-	  description: "<p>We respect your right to privacy. You can choose not to allow some types of cookies. Your cookie preferences will apply across our website.</p>",
-	  creditLinkText: "Get this banner for free",
-	  creditLinkAccessibleLabel: "Get this banner for free"
-	}
-  },
-  position: {
-	banner: "bottomLeft"
-  }
-});
-</script>
+	</script>
 	<!--Privacy policy ends-->
 
 
 </head>
+
 <body>
 
 	<!--[if lte IE 9]>
@@ -374,12 +375,12 @@ silktideCookieBannerManager.updateCookieBannerConfig({
 											alt="portfolio image" class="img-responsive center-block" />
 									</a>
 								</div><!-- /.filtr-item -->
-							</div><!-- /.col -->
-						</div><!-- /.row -->
-					</div><!-- /.filtr-container-->
-				</div><!-- /.gallery-content -->
-			</div><!--/.galley-box-->
-		</div><!--/.container-->
+	</div><!-- /.col -->
+	</div><!-- /.row -->
+	</div><!-- /.filtr-container-->
+	</div><!-- /.gallery-content -->
+	</div><!--/.galley-box-->
+	</div><!--/.container-->
 	</section><!--/.gallery-->
 
 	<!--gallery end-->
@@ -560,7 +561,7 @@ silktideCookieBannerManager.updateCookieBannerConfig({
 		</div><!--/.container-->
 	</section>
 	<!--packages end-->
-<!--
+	<!--
 	
 	<section id="group" class="packages">
 		<div class="container">
@@ -809,17 +810,17 @@ silktideCookieBannerManager.updateCookieBannerConfig({
 											</a>
 											<p><span>Coming Soon</span></p>
 										</div> <!-- /.item-title-->
-									</div><!-- /.filtr-item -->
-								</div><!-- /.col -->
+							</div><!-- /.filtr-item -->
+						</div><!-- /.col -->
 
-							</div><!-- /.row -->
+					</div><!-- /.row -->
 
-						</div><!-- /.filtr-container-->
-					</div><!-- /.gallery-content -->
-				</div>
-				<!--/.galley-box-->
-			</div>
-			<!--/.gallery-details-->
+				</div><!-- /.filtr-container-->
+			</div><!-- /.gallery-content -->
+		</div>
+		<!--/.galley-box-->
+		</div>
+		<!--/.gallery-details-->
 		</div>
 		<!--/.container-->
 
