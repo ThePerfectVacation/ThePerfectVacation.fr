@@ -2,17 +2,16 @@
 <html class="no-js" lang="en">
 <html>
 <head>
-	
+    
 <meta charset="utf-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-<title>About - The Perfect Vacation</title>
-<meta name="description" content="Learn more about The Perfect Vacation and our mission to provide unforgettable Paris tours."/> 
+<title>Our Guides - The Perfect Vacation</title>
+<meta name="description" content="Meet our amazing team of expert guides and learn more about their passion for Paris tours."/> 
 <link rel="canonical" href="https://theperfectvacation.fr/blog/about.html" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <link rel="shortcut icon" href="#">
 <link rel="stylesheet" type="text/css" href="assets/css/screen.css"/>
 <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:400,300italic,300,400italic,700,700italic|Playfair+Display:400,700,400italic,700italic"/>
-<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-GKFD2HN67V"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -21,136 +20,176 @@
 
   gtag('config', 'G-GKFD2HN67V');
 </script>
-<!--End of Google Tag-->
-<!--Privacy Policy-->
 </script>
 <link rel="stylesheet" id="silktide-consent-manager-css" href="/cookie-banner/silktide-consent-manager.css">
 <script src="/cookie-banner/silktide-consent-manager.js"></script>
 <script>
 silktideCookieBannerManager.updateCookieBannerConfig({
   background: {
-	showBackground: true
+    showBackground: true
   },
   cookieIcon: {
-	position: "bottomLeft"
+    position: "bottomLeft"
   },
   cookieTypes: [
-	{
-	  id: "necessary",
-	  name: "Necessary",
-	  description: "<p>These cookies are necessary for the website to function properly and cannot be switched off. They help with things like logging in and setting your privacy preferences.</p>",
-	  required: true,
-	  onAccept: function() {
-		console.log('Add logic for the required Necessary here');
-	  }
-	},
-	{
-	  id: "analytical",
-	  name: "Analytical",
-	  description: "<p>These cookies help us improve the site by tracking which pages are most popular and how visitors move around the site.</p>",
-	  required: false,
-	  onAccept: function() {
-		gtag('consent', 'update', {
-		  analytics_storage: 'granted',
-		});
-		dataLayer.push({
-		  'event': 'consent_accepted_analytical',
-		});
-	  },
-	  onReject: function() {
-		gtag('consent', 'update', {
-		  analytics_storage: 'denied',
-		});
-	  }
-	},
-	{
-	  id: "advertising",
-	  name: "Advertising",
-	  description: "<p>These cookies provide extra features and personalization to improve your experience. They may be set by us or by partners whose services we use.</p>",
-	  required: false,
-	  onAccept: function() {
-		gtag('consent', 'update', {
-		  ad_storage: 'granted',
-		  ad_user_data: 'granted',
-		  ad_personalization: 'granted',
-		});
-		dataLayer.push({
-		  'event': 'consent_accepted_advertising',
-		});
-	  },
-	  onReject: function() {
-		gtag('consent', 'update', {
-		  ad_storage: 'denied',
-		  ad_user_data: 'denied',
-		  ad_personalization: 'denied',
-		});
-	  }
-	}
+    {
+      id: "necessary",
+      name: "Necessary",
+      description: "<p>These cookies are necessary for the website to function properly and cannot be switched off. They help with things like logging in and setting your privacy preferences.</p>",
+      required: true,
+      onAccept: function() {
+        console.log('Add logic for the required Necessary here');
+      }
+    },
+    {
+      id: "analytical",
+      name: "Analytical",
+      description: "<p>These cookies help us improve the site by tracking which pages are most popular and how visitors move around the site.</p>",
+      required: false,
+      onAccept: function() {
+        gtag('consent', 'update', {
+          analytics_storage: 'granted',
+        });
+        dataLayer.push({
+          'event': 'consent_accepted_analytical',
+        });
+      },
+      onReject: function() {
+        gtag('consent', 'update', {
+          analytics_storage: 'denied',
+        });
+      }
+    },
+    {
+      id: "advertising",
+      name: "Advertising",
+      description: "<p>These cookies provide extra features and personalization to improve your experience. They may be set by us or by partners whose services we use.</p>",
+      required: false,
+      onAccept: function() {
+        gtag('consent', 'update', {
+          ad_storage: 'granted',
+          ad_user_data: 'granted',
+          ad_personalization: 'granted',
+        });
+        dataLayer.push({
+          'event': 'consent_accepted_advertising',
+        });
+      },
+      onReject: function() {
+        gtag('consent', 'update', {
+          ad_storage: 'denied',
+          ad_user_data: 'denied',
+          ad_personalization: 'denied',
+        });
+      }
+    }
   ],
   text: {
-	banner: {
-	  description: "<p>We use cookies on our site to enhance your user experience, provide personalized content, and analyze our traffic. <a href=\"https://your-website.com/cookie-policy\" target=\"_blank\">Cookie Policy.</a></p>",
-	  acceptAllButtonText: "Accept all",
-	  acceptAllButtonAccessibleLabel: "Accept all cookies",
-	  rejectNonEssentialButtonText: "Reject non-essential",
-	  rejectNonEssentialButtonAccessibleLabel: "Reject non-essential",
-	  preferencesButtonText: "Preferences",
-	  preferencesButtonAccessibleLabel: "Toggle preferences"
-	},
-	preferences: {
-	  title: "Customize your cookie preferences",
-	  description: "<p>We respect your right to privacy. You can choose not to allow some types of cookies. Your cookie preferences will apply across our website.</p>",
-	  creditLinkText: "Get this banner for free",
-	  creditLinkAccessibleLabel: "Get this banner for free"
-	}
+    banner: {
+      description: "<p>We use cookies on our site to enhance your user experience, provide personalized content, and analyze our traffic. <a href=\"https://your-website.com/cookie-policy\" target=\"_blank\">Cookie Policy.</a></p>",
+      acceptAllButtonText: "Accept all",
+      acceptAllButtonAccessibleLabel: "Accept all cookies",
+      rejectNonEssentialButtonText: "Reject non-essential",
+      rejectNonEssentialButtonAccessibleLabel: "Reject non-essential",
+      preferencesButtonText: "Preferences",
+      preferencesButtonAccessibleLabel: "Toggle preferences"
+    },
+    preferences: {
+      title: "Customize your cookie preferences",
+      description: "<p>We respect your right to privacy. You can choose not to allow some types of cookies. Your cookie preferences will apply across our website.</p>",
+      creditLinkText: "Get this banner for free",
+      creditLinkAccessibleLabel: "Get this banner for free"
+    }
   },
   position: {
-	banner: "bottomLeft"
+    banner: "bottomLeft"
   }
 });
 </script>
-<!--Privacy policy ends-->
-
 </head>
 <body class="post-template page-template page">
-	
+    
 <div class="site-wrapper">
-	<nav class="main-nav overlay clearfix">
-	<a class="blog-logo" href="https://theperfectvacation.fr"><img src="assets/img/logo.png" alt="TPV"/></a>
-	<ul id="menu">
-		<li class="nav-home nav-current" role="presentation"><a href="index.html">Home</a></li>
-		<li class="nav-article-example" role="presentation"><a href="../index.html#gallery">Tours</a></li>
-		<li class="nav-about-us" role="presentation"><a href="about.html">About us</a></li>
-		<span class="socialheader">
-		<a href="#"><span class='symbol'>circletwitterbird</span></a>
-		<a href="#"><span class='symbol'>circlefacebook</span></a>
-		<a href="mailto:theperfectvacation.fr@gmail.com"><span class='symbol'>circleemail</span></a>
-		</span>
-	</ul>
-	</nav>
-	<header class="main-header post-head " style="background-image: url(http://s3.amazonaws.com/caymandemo/wp-content/uploads/sites/10/2015/10/10174958/fas-compressor.jpg)">
-	<div class="vertical">
-		<div class="main-header-content inner">
-			<h1 class="post-title">About TPV</h1>
-		</div>
-	</div>
-	</header>
-	<main class="content" role="main">
-	<article class="post tag-fashion tag-art page">
-	<section class="post-content">
-	<p>
-		<strong>WIP</strong>
-	</p>
-	
-	</section>
-	</article>
-	</main>
-	<footer class="site-footer clearfix">
-	<a href="#top" id="back-to-top" class="back-top"></a>
-	<div class="text-center">
-		<a href="https://www.shabreznoorani.com">Shabrez Noorani</a> &copy; 2025<br/>
-	</div>
-	</footer>
+    <nav class="main-nav overlay clearfix">
+    <a class="blog-logo" href="https://theperfectvacation.fr"><img src="assets/img/logo.png" alt="TPV"/></a>
+    <ul id="menu">
+        <li class="nav-home" role="presentation"><a href="index.html">Home</a></li>
+        <li class="nav-article-example" role="presentation"><a href="../index.html#gallery">Tours</a></li>
+        <li class="nav-our-guides nav-current" role="presentation"><a href="guides.html">Our Guides</a></li>
+        <span class="socialheader">
+        <a href="#"><span class='symbol'>circletwitterbird</span></a>
+        <a href="#"><span class='symbol'>circlefacebook</span></a>
+        <a href="mailto:theperfectvacation.fr@gmail.com"><span class='symbol'>circleemail</span></a>
+        </span>
+    </ul>
+    </nav>
+    <header class="main-header post-head " style="background-image: url(assets/img/guiderev1.svg)">
+    <div class="vertical">
+        <div class="main-header-content inner">
+            <h1 class="post-title">Meet Our Amazing Guides</h1>
+        </div>
+    </div>
+    </header>
+    <main class="content" role="main">
+        <article class="post tag-fashion tag-art page">
+            <section class="post-content">
+                <h2>Our Leadership</h2>
+                <div class="guide-profile-card manager">
+                    <img src="assets/img/June.svg" alt="June" class="guide-photo-main">
+                    <h3>June</h3>
+                    <p class="guide-summary">As the visionary leader of The Perfect Vacation, June ensures every tour is a masterpiece. With an unwavering commitment to excellence and a deep love for travel, she empowers our guides to create unforgettable moments for every guest.</p>
+                </div>
+
+                <hr style="margin: 40px 0;">
+
+                <h2>Our Expert Guides</h2>
+                <div class="guides-grid">
+                    <div class="guide-profile-card">
+                        <a href="nikhil.html">
+                            <img src="assets/img/nik.svg" alt="Nikhil" class="guide-photo-thumb">
+                            <h3>Nikhil</h3>
+                            <p class="guide-summary">Your expert in Parisian history, bringing the past to life with captivating stories and local insights.</p>
+                            <span class="read-more">Learn More &rarr;</span>
+                        </a>
+                    </div>
+
+                    <div class="guide-profile-card">
+                        <a href="perkins.html">
+                            <img src="assets/img/perkins.svg" alt="Perkins" class="guide-photo-thumb">
+                            <h3>Perkins</h3>
+                            <p class="guide-summary">An adventure enthusiast specializing in hidden gems and off-the-beaten-path experiences across the city.</p>
+                            <span class="read-more">Learn More &rarr;</span>
+                        </a>
+                    </div>
+
+                    <div class="guide-profile-card">
+                        <a href="yusuff.html">
+                            <img src="assets/img/yusuff.svg" alt="Yusuff" class="guide-photo-thumb">
+                            <h3>Yusuff</h3>
+                            <p class="guide-summary">A passionate storyteller who loves revealing the vibrant culture and culinary delights of Paris.</p>
+                            <span class="read-more">Learn More &rarr;</span>
+                        </a>
+                    </div>
+
+                    <div class="guide-profile-card">
+                        <a href="sz.html">
+                            <img src="assets/img/sz.svg" alt="Sz" class="guide-photo-thumb">
+                            <h3>Sz</h3>
+                            <p class="guide-summary">Your friendly guide to Paris's iconic landmarks and charming neighborhoods, ensuring a memorable visit.</p>
+                            <span class="read-more">Learn More &rarr;</span>
+                        </a>
+                    </div>
+
+                </div>
+            </section>
+        </article>
+    </main>
+    <footer class="site-footer clearfix">
+    <a href="#top" id="back-to-top" class="back-top"></a>
+    <div class="text-center">
+        <a href="https://www.shabreznoorani.com">Shabrez Noorani</a> &copy; 2025<br/>
+    </div>
+    </footer>
 </div>
 <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
 <script type="text/javascript" src="assets/js/masonry.min.js"></script>

@@ -2297,3 +2297,98 @@ div#preloader {
     line-height: 1.6; /* Improves readability by spacing lines comfortably */
 }
 
+
+/* Guide Profiles Styles */
+
+.guide-profile-card {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 30px; /* Spacing between cards */
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.guide-profile-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+
+.guide-profile-card a {
+    text-decoration: none;
+    color: inherit; /* Inherit color from parent to avoid blue links */
+    display: block; /* Make the whole card clickable */
+}
+
+.guide-profile-card h3 {
+    margin-top: 15px;
+    margin-bottom: 10px;
+    font-size: 1.5em;
+    color: #333;
+}
+
+.guide-profile-card .guide-summary {
+    font-size: 1.0em;
+    color: #666;
+    line-height: 1.5;
+    min-height: 4em; /* Ensure consistent height for summaries */
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.guide-profile-card .read-more {
+    display: inline-block;
+    margin-top: 15px;
+    color: #007bff; /* Or your brand's accent color */
+    font-weight: bold;
+}
+
+/* Manager's specific styling */
+.guide-profile-card.manager {
+    max-width: 800px; /* Adjust as needed */
+    margin: 0 auto 50px auto; /* Center and provide bottom spacing */
+    padding: 30px;
+}
+
+.guide-profile-card.manager .guide-photo-main {
+    width: 200px; /* Larger photo for manager */
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #f0f0f0;
+    margin-bottom: 20px;
+}
+
+/* Grid for guides */
+.guides-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Responsive grid */
+    gap: 30px; /* Space between grid items */
+    margin-top: 30px;
+}
+
+.guide-profile-card .guide-photo-thumb {
+    width: 150px; /* Smaller photos for grid guides */
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #f0f0f0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .guides-grid {
+        grid-template-columns: 1fr; /* Stack on smaller screens */
+    }
+    .guide-profile-card.manager {
+        padding: 20px;
+    }
+    .guide-profile-card.manager .guide-photo-main {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+/* Guide Profile styles ends */
